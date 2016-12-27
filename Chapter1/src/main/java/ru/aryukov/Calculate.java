@@ -7,7 +7,6 @@ package ru.aryukov;
 public class Calculate {
 /**
  *main method.
- *@author oaryukov
  *@since 26.12.2016
  *@param args - argument for main method
 */
