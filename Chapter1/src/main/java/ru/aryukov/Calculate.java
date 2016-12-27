@@ -8,12 +8,12 @@ public class Calculate {
 	/**
 	 * result of calculation.
 	 */
-	private double result;
+	private static double result;
 	/**
 	 * getter for result.
 	 * @return result
 	 */
-	public double getResult() {
+	public static double getResult() {
 		return result;
 	}
 	/**
@@ -22,7 +22,7 @@ public class Calculate {
 	 *@param a - argument for add method
 	 *@param b - argument for add method
 	*/
-	public void add(double a, double b) {
+	public static void add(double a, double b) {
 		result = a + b;
 	}
 	/**
@@ -30,7 +30,7 @@ public class Calculate {
 	 * @param a - argument for substract
 	 * @param b - argument for substract
 	 */
-	public void substract(double a, double b) {
+	public static void substract(double a, double b) {
 		result = a - b;
 	}
 	/**
@@ -38,19 +38,15 @@ public class Calculate {
 	 * @param  b - argument for substract
 	 * @param a -argument for substract
 	 */
-	public void div(double a, double b) {
-		try {
-			result = a / b;
-		} catch (ArithmeticException e) {
-			e.printStackTrace();
-		}
+	public static void div(double a, double b) {
+		result = a / b;
 	}
 	/**
 	 * multiplay method.
 	 * @param a - param for method
 	 * @param b - argument for substract
 	 */
-	public  void multiplay(double a, double b) {
+	public static void multiplay(double a, double b) {
 		result = a * b;
 	}
 }

@@ -6,37 +6,36 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class CalculateTest {
-    Calculate calculate = new Calculate();
     /**
      * Test add
      */
     @Test
     public void whenAdd() {
-        calculate.add(2.5, 3.5);
-        assertThat(calculate.getResult(),is(6.0));
+        Calculate.add(2.5, 3.5);
+        assertThat(Calculate.getResult(),is(6.0));
     }
     /**
-     * Test substract
+     * Test subtract
      */
     @Test
     public void whenSub() {
-        calculate.substract(2.6,2.1);
-        assertThat(calculate.getResult(), is(0.5));
+        Calculate.substract(2.6,2.1);
+        assertThat(Calculate.getResult(), is(0.5));
     }
     /**
      * Test div
      */
     @Test
     public void whenDiv() {
-        calculate.div(9.0,3.0);
-        assertThat(calculate.getResult(), is(3.0));
+        Calculate.div(9.0,3.0);
+        assertThat(Calculate.getResult(), is(3.0));
     }
     /**
-     * Test multiplay
+     * Test multiply
      */
     @Test
     public void whenMultiply() {
-        calculate.multiplay(3.0,3.0);
-        assertThat(calculate.getResult(), is(9.0));
+        Calculate.multiplay(3.0,3.0);
+        assertThat(Calculate.getResult(), is(9.0));
     }
 }
