@@ -38,7 +38,7 @@ public class Triangle {
         double ab = triangle.a.distanceTo(triangle.b);
         double ac = triangle.a.distanceTo(triangle.c);
         double bc = triangle.b.distanceTo(triangle.c);
-        if ((ab + ac) > bc) {
+        if (((ab + ac) > bc) & (bc > 0)) {
             double p = (ac + bc + ab) / 2;
             return Math.sqrt(p * (p - ac) * (p - ab) * (p - bc));
         }

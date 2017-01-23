@@ -1,6 +1,9 @@
 package ru.aryukov.triangle;
 
 import org.junit.Test;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.number.IsCloseTo.closeTo;
 
 /**
  * Created by olega on 27.12.16.
