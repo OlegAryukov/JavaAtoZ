@@ -1,7 +1,9 @@
-package ru.aryukov;
+package ru.aryukov.eveniterator;
 
 
 import org.junit.Test;
+import ru.aryukov.eveniterator.EvenIterator;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 /**

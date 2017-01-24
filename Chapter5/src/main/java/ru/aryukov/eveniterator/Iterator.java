@@ -1,4 +1,4 @@
-package ru.aryukov;
+package ru.aryukov.eveniterator;
 
 /**
  * Created by oaryukov on 05.01.2017.

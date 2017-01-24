@@ -1,4 +1,4 @@
-package ru.aryukov;
+package ru.aryukov.eveniterator;
 
 import java.util.NoSuchElementException;
 
