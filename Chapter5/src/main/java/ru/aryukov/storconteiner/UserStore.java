@@ -7,7 +7,18 @@ import ru.aryukov.SimpleArray.SimpleArray;
  */
 public class UserStore implements Store<User> {
 
-    private SimpleArray<User> conteiner = new SimpleArray<>(10);
+    /**
+     * Data container.
+     */
+    private SimpleArray<User> conteiner;
+
+    /**
+     * Constructor.
+     * @param conteiner initial data container
+     */
+    public UserStore(SimpleArray<User> conteiner) {
+        this.conteiner = conteiner;
+    }
 
     @Override
     public void add(User element) {

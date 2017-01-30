@@ -6,7 +6,18 @@ import ru.aryukov.SimpleArray.SimpleArray;
  * Created by olega on 24.01.17.
  */
 public class RoleStore implements Store<Role> {
-    private SimpleArray<Role> conteiner = new SimpleArray<>(10);
+    /**
+     * Data container.
+     */
+    private SimpleArray<Role> conteiner;
+
+    /**
+     * Constructor.
+     * @param conteiner initial data container
+     */
+    public RoleStore(SimpleArray<Role> conteiner) {
+        this.conteiner = conteiner;
+    }
 
     @Override
     public void add(Role element) {

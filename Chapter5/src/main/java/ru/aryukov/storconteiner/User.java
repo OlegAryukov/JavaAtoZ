@@ -5,6 +5,10 @@ package ru.aryukov.storconteiner;
  */
 public class User extends Base {
 
+    /**
+     * Constructor.
+     * @param id initial id.
+     */
     public User(String id) {
         super(id);
     }

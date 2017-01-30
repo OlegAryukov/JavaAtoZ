@@ -5,6 +5,10 @@ package ru.aryukov.storconteiner;
  */
 public class Role extends Base {
 
+    /**
+     * Constructor.
+     * @param id for element
+     */
     public Role(String id) {
         super(id);
     }
