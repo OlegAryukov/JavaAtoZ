@@ -19,4 +19,15 @@ public class MyLinkedListTest {
         assertThat(myLinkedList.getSize(), is(4));
     }
 
+    @Test
+    public void whenWeAddByPosition(){
+        MyLinkedList<String> myLinkedList = new MyLinkedList<String>();
+        myLinkedList.add("Hello");
+        myLinkedList.add("world");
+        myLinkedList.add("this");
+        myLinkedList.add("is");
+        myLinkedList.add("Make", 3);
+        assertThat(myLinkedList.getSize(), is(5));
+    }
+
 }

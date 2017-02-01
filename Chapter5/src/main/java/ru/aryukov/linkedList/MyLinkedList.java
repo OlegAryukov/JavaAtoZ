@@ -10,15 +10,15 @@ public class MyLinkedList<T> {
     private int size;
 
     public MyLinkedList() {
-        //Entry<T> newEntry = new Entry<T>(null, last, first);
-        this.first = new Entry<T>(null, last, first);
         this.size = 0;
     }
 
     public void add(T element) {
         if (size == 0) {
-            Entry<T> newEntry = new Entry<T>(element, last, first);
-            this.last = newEntry;
+            Entry<T> tmp = last;
+            Entry<T> newEntry = new Entry<T>(element, null, tmp);
+            last = newEntry;
+            first = newEntry;
             size++;
         } else {
             linkedAtLast(element);
@@ -31,10 +31,29 @@ public class MyLinkedList<T> {
     }
 
     private void linkedAtLast(T element){
-        Entry<T> newEntry = new Entry<T>(element, last, last.previos);
-        this.last = newEntry;
+        Entry<T> tmp = last;
+        Entry<T> newEntry = new Entry<T>(element, null, tmp);
+        last = newEntry;
+        tmp.next = newEntry;
         size++;
     }
+
+    public void add(T element, int position){
+        if(position < size){
+            int i = 0;
+            Entry<T> e = first;
+            do {
+                e = e.next;
+                i++;
+            }while (position - 1> i);
+            Entry<T> tmp = e;
+            Entry<T> newEntry = new Entry<T>(element, tmp, tmp.previos);
+            tmp.previos.next = newEntry;
+            tmp.previos = newEntry;
+            size++;
+        }
+    }
+
 
     public int getSize(){
         return size;
