@@ -66,4 +66,17 @@ public class MyLinkedListTest {
         assertThat(result, is(test));
     }
 
+    @Test
+    public void whenWeGetLastWithDelete(){
+        MyLinkedList<String> myLinkedList = new MyLinkedList<String>();
+        myLinkedList.add("Hello");
+        myLinkedList.add("world");
+        myLinkedList.add("this");
+        myLinkedList.add("is");
+        String
+        String[] result = new String[]{"Hello", "world", "this"};
+        String[] test = myLinkedList.toArray(new String[myLinkedList.getSize()]);
+        assertThat(result, is(test));
+    }
+
 }

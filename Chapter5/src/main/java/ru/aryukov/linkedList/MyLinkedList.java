@@ -65,6 +65,19 @@ public class MyLinkedList<T> {
         }
     }
 
+    public T getLast(){
+        return last.element;
+    }
+
+    public T getLastWithDelete(){
+        T element = last.element;
+        Entry<T> newLast = last.previos;
+        newLast.next = null;
+        last = newLast;
+        size--;
+        return element;
+    }
+
     /**
      * Method for remove element.
      * @param element witch delete
